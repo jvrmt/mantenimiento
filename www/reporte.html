@@ -1,0 +1,63 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left">
+      <a href="#" class="back link">
+        <i class="icon icon-back"></i>
+        <span>Cancelar</span>
+      </a>
+    </div>
+    <div class="center sliding">Enviar reporte</div>
+    <!--<div class="right">
+      <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+    </div>-->
+  </div>
+</div>
+<div class="pages">
+  <div data-page="reporte" class="page">
+    <div class="page-content">
+      <div class="content-block">
+          <div style="overflow:auto;">  
+              <div id="resultado"></div>
+              <form enctype="multipart/form-data" style="height:100%; width:100%;">
+                
+                  <label for="solicitante">Nombre del solicitante </label>
+                  <input type="text" id="solicitante" name="nombreSolicitante" readonly>
+                  
+                  <input type="hidden" id="fecha" name="dia" readonly>
+                  <input type="hidden" id="hora" name="hora">
+                                          
+                  <label>Ubicación del servicio (arrastra el marcador)</label>
+                  <input type="hidden" id="lat" name="lat">
+                  <input type="hidden" id="long" name="long">
+                  <center>
+                      <div style="height:500px">
+                          <div id="map"></div>
+                      </div>
+                  </center>
+                                          
+                  <label for="denuncia">Descripción detallada de la falla a reparar</label>
+                  <textarea name="denuncia" id="denuncia" requiered></textarea>
+                                          
+                  <input type="hidden" id="data" name="data">
+                  <center>
+                      <div>
+                          <div id="reporte" class="divisionBoton">
+                              Reporte fotográfico
+                              <input type="file" class="ocultarArchivo"id="imagen" name="imagen" accept="image/x-   png,image/gif,image/jpeg" onchange="loadImageFile();">
+                          </div>
+                      </div>
+                      <img id="mostrarimagen" width="80%">
+                                              
+                  </center>
+              </form>
+              <center>
+   
+                      <div style="width: 50%">
+                        <a onclick="enviarDatos()" class="button button-raised button-fill color-green" id="botondarkcyan">Enviar     reporte</a>
+                      </div>
+              </center>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

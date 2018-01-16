@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.lumberg.greeeaaat" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Permissions">
+        <param name="android-package" value="com.android.plugins.Permissions" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <name>Mantenimiento</name>
+    <description>
+        Aplicacion de servicios generales de mantenimiento de CUCEI.
+    </description>
+    <author email="javier.moreno@alumnos.udg.mx" href="http://www.cucei.udg.mx/">
+        Cucei mobile
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <gap:config-file mode="add" parent="/manifest" platform="android">
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+    </gap:config-file>
+    <allow-intent href="market:*" />
+    <icon density="mdpi" src="res/android/mipmap-mdpi/ic_launcher.png" />
+    <icon density="hdpi" src="res/android/mipmap-hdpi/ic_launcher.png" />
+    <icon density="xhdpi" src="res/android/mipmap-xhdpi/ic_launcher.png" />
+    <icon density="xxhdpi" src="res/android/mipmap-xxhdpi/ic_launcher.png" />
+    <icon density="xxxhdpi" src="res/android/mipmap-xxxhdpi/ic_launcher.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
+</widget>

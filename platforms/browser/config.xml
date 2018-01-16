@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.lumberg.greeeaaat" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Mantenimiento</name>
+    <description>
+        Aplicacion de servicios generales de mantenimiento de CUCEI.
+    </description>
+    <author email="javier.moreno@alumnos.udg.mx" href="http://www.cucei.udg.mx/">
+        Cucei mobile
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <gap:config-file mode="add" parent="/manifest" platform="android">
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+    </gap:config-file>
+    <preference name="DisallowOverscroll" value="true" />
+</widget>

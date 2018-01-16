@@ -1,0 +1,111 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+body{
+   background-color: #ccc
+}
+input[type=text], input[type=password], input[type=date],textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+#botondarkcyan,#botoncadetblue,#reporte{
+    font-size:18px;
+}
+textarea {
+    height:150px;
+}
+#botondarkcyan{
+    background-color: darkcyan;
+}
+#botoncadetblue{
+    background-color:cadetblue;
+}
+input[type=submit]:active {
+    background-color: lightblue;
+}
+p,label{
+    font-family:Verdana;
+    color:#aaaaaa;
+    font-size: 18px;
+}
+#map{
+    height:95%;
+    width:90%;
+    padding:5px 10px;
+    overflow:scroll
+    margin:8px 0px;
+    position: relative;
+    
+ }
+#map *{
+    background-color:initial;
+}
+ html,body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+.divisionBoton{
+  padding:5px 10px;
+  background:#ED9121;
+  position:relative;
+  color:#fff;
+  border-radius:2px;
+  text-align:center;
+  cursor:pointer;
+  margin: 8px 0;
+  width:90%;
+}
+.divisionBotonCargado{
+  padding:5px 10px;
+  background:#59AEE7;
+  position:relative;
+  color:#fff;
+  border-radius:2px;
+  text-align:center;
+  float:left;
+  cursor:pointer;
+  margin: 8px 0;
+  width:100%;
+}
+.ocultarArchivo {
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" xmlns:android = "http://schemas.android.com/apk/res/android" id = "com.lumberg.greeeaaat" version = "1.0.0">
+        
+    <name>Mantenimiento</name>
+    <description>
+        Aplicacion de servicios generales de mantenimiento de CUCEI.
+    </description>
+    <author email="javier.moreno@alumnos.udg.mx" href="http://www.cucei.udg.mx/">
+        Cucei mobile
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    
+    <gap:plugin name="cordova-plugin-dialogs" source="npm" />
+    
+    <gap:config-file platform="android" parent="/manifest" mode="add">
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    </gap:config-file>
+            
+    <platform name="android">
+        <preference name="android-minSdkVersion" value="14" />
+        <allow-intent href="market:*" />
+        <icon density="mdpi" src="res/android/mipmap-mdpi/ic_launcher.png" />
+        <icon density="hdpi" src="res/android/mipmap-hdpi/ic_launcher.png" />
+        <icon density="xhdpi" src="res/android/mipmap-xhdpi/ic_launcher.png" />
+        <icon density="xxhdpi" src="res/android/mipmap-xxhdpi/ic_launcher.png" />
+        <icon density="xxxhdpi" src="res/android/mipmap-xxxhdpi/ic_launcher.png" />
+    </platform>
+    
+    <gap:config-file platform="ios" parent="NSPhotoLibraryUsageDescription">
+        <string>For select and upload images.</string>
+    </gap:config-file>
+    <gap:config-file platform="ios" parent="NSCameraUsageDescription">
+        <string>This app requires access to the camera.</string>
+    </gap:config-file>
+    
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="BackupWebStorage" value="none" />
+        <icon height="180" src="res/ios/icon-180.png" width="180" />
+        <icon height="60" src="res/ios/icon-60.png" width="60" />
+        <icon height="120" src="res/ios/icon-120.png" width="120" />
+        <icon height="76" src="res/ios/icon-76.png" width="76" />
+        <icon height="152" src="res/ios/icon-152.png" width="152" />
+        <icon height="40" src="res/ios/icon-40.png" width="40" />
+        <icon height="80" src="res/ios/icon-80.png" width="80" />
+        <icon height="57" src="res/ios/icon-57.png" width="57" />
+        <icon height="114" src="res/ios/icon-114.png" width="114" />
+        <icon height="72" src="res/ios/icon-72.png" width="72" />
+        <icon height="144" src="res/ios/icon-144.png" width="144" />
+        <icon height="29" src="res/ios/icon-29.png" width="29" />
+        <icon height="58" src="res/ios/icon-58.png" width="58" />
+        <icon height="50" src="res/ios/icon-50.png" width="50" />
+        <icon height="100" src="res/ios/icon-100.png" width="100" />
+    </platform>
+    <preference name="DisallowOverscroll" value="true" />
+    <engine name="android" spec="~6.3.0" />
+    <plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
+    <plugin name="cordova-plugin-console" spec="~1.0.1" />
+    <plugin name="cordova-plugin-statusbar" spec="~1.0.1" />
+</widget>

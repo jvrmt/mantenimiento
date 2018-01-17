@@ -15,7 +15,7 @@
                     //navigator.notification.alert('Error',alertDismissed,'Nop','Aceptar');
                     document.getElementById("nip").value="";
                     //window.location.href="error.html";
-                    navigator.notification.alert("Combinación de codigo y nip erronea",function(){},"¡Ups!","Aceptar");
+                    navigator.notification.alert("Combinación de código y nip erronea",function(){},"¡Ups!","Aceptar");
                     //myApp.alert("Combinación de codigo y nip erronea","¡Ups!");
                 }
                 else
@@ -32,7 +32,7 @@
                     }
                     else
                     {
-                        navigator.notification.alert("Combinación de codigo y nip erronea",function()   {},"¡Ups!","Aceptar");
+                        navigator.notification.alert("Combinación de código y nip erronea",function()   {},"¡Ups!","Aceptar");
                         //myApp.alert("Combinación de codigo y nip erronea","¡Ups!");
                         document.getElementById("nip").value="";
                         window.location.href="error.html";

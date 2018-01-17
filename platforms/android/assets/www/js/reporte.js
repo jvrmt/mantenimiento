@@ -51,11 +51,6 @@ function cargarDatos()
 }
 function enviarDatos()
 {
-    //var data=document.getElementById("data").value;
-    //document.getElementById("botondarkcyan").disabled=true;
-                
-    //var mensajeAnterior=document.getElementById("botondarkcyan").innerHTML;
-    //document.getElementById("botondarkcyan").innerHTML="Enviando...";
                 
     var data=imagen64;
     //var data=document.getElementById("data").value;
@@ -65,29 +60,25 @@ function enviarDatos()
     var long=document.getElementById("long").value;
     var denuncia=document.getElementById("denuncia").value; 
                 
-        //url: "https://peaton.000webhostapp.com/mantenimiento/verEnviado.php",
     //url: "https://peaton.000webhostapp.com/mantenimiento/verEnviado.php",
+    //url: "http://148.202.152.33/datosCucei.php",
+
     $.ajax({
         type: "POST",
         url: "http://148.202.152.33/datosCucei.php",
         data: {dia:dia,hora:hora,denuncia:denuncia,data:data,lat:lat,long:long},
         timeout: 60000
     })
-        .done(function( msg ) {
-        //document.getElementById("botondarkcyan").innerHTML=mensajeAnterior;
-        //document.getElementById("botondarkcyan").disabled=false; 
+        .done(function( msg ) { 
         //myApp.alert("Tu reporte se ha enviado","¡Excelente!");
-        navigator.notification.alert("Tu reposrte se ha enviado",function(){},"¡Excelente!","Aceptar");
+        navigator.notification.alert("Tu reporte se ha enviado",function(){},"¡Excelente!","Aceptar");
 
 
         mainView.router.back();
     })
         .fail(function(){
-        //alert( "Ha ocurrido un error, intentalo de nuevo");
         //myApp.alert("Ha ocurrido un error, intentalo de nuevo","¡Ups!");
         navigator.notification.alert("Ha ocurrido un error, intentalo de nuevo",function(){},"¡Ups!","Aceptar");
-        //document.getElementById("botondarkcyan").innerHTML=mensajeAnterior;
-        //document.getElementById("botondarkcyan").disabled=false; 
     });    
 }
 
@@ -114,7 +105,11 @@ function loadImageFile() {
     if (document.getElementById("imagen").files.length === 0) { return; }
                 
     var oFile = document.getElementById("imagen").files[0];
-    if (!rFilter.test(oFile.type)) { alert("Tienes que seleccionar una imagen"); return; }
+    if (!rFilter.test(oFile.type)) {
+        //alert("Tienes que seleccionar una imagen");
+        navigator.notification.alert("Tienes que seleccionar una imagen",function(){},"¡Ups!","Aceptar");
+        return; 
+    }
     oFReader.readAsDataURL(oFile);
 }
 

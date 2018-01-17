@@ -60,8 +60,9 @@ function enviarDatos()
     var long=document.getElementById("long").value;
     var denuncia=document.getElementById("denuncia").value; 
                 
-        //url: "https://peaton.000webhostapp.com/mantenimiento/verEnviado.php",
     //url: "https://peaton.000webhostapp.com/mantenimiento/verEnviado.php",
+    //url: "http://148.202.152.33/datosCucei.php",
+
     $.ajax({
         type: "POST",
         url: "http://148.202.152.33/datosCucei.php",
@@ -70,7 +71,7 @@ function enviarDatos()
     })
         .done(function( msg ) { 
         //myApp.alert("Tu reporte se ha enviado","¡Excelente!");
-        navigator.notification.alert("Tu reposrte se ha enviado",function(){},"¡Excelente!","Aceptar");
+        navigator.notification.alert("Tu reporte se ha enviado",function(){},"¡Excelente!","Aceptar");
 
 
         mainView.router.back();

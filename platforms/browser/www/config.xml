@@ -15,11 +15,17 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <gap:plugin name="cordova-plugin-dialogs" source="npm" />
     <gap:config-file mode="add" parent="/manifest" platform="android">
         <uses-permission android:name="android.permission.CAMERA" />
         <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
         <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-        <uses-permission android:name="android.permission.READ_CONTACTS" />
+    </gap:config-file>
+    <gap:config-file parent="NSPhotoLibraryUsageDescription" platform="ios">
+        <string>For select and upload images.</string>
+    </gap:config-file>
+    <gap:config-file parent="NSCameraUsageDescription" platform="ios">
+        <string>This app requires access to the camera.</string>
     </gap:config-file>
     <preference name="DisallowOverscroll" value="true" />
 </widget>
